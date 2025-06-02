@@ -14,11 +14,11 @@
 				<fieldset>
 					<legend>Contact Information</legend>
 					<label for="firstName">First Name:</label><br>
-					<input type="text" name="firstName" id="firstName" required autofocus><br><br>
+					<input type="text" name="firstName" id="firstName" required autofocus autocomplete="given-name"><br>
 					<label for="lastName">Last Name:</label><br>
-					<input type="text" name="lastName" id="lastName"><br>
+					<input type="text" name="lastName" id="lastName" autocomplete="family-name"><br>
 					<label for="tel">Telephone Number:</label><br>
-					<input type="tel" id="tel" name="tel">
+					<input type="tel" id="tel" name="tel" autocomplete="tel">
 				</fieldset>
 			</section>
 
@@ -44,9 +44,12 @@
 			</section>
 
 			<section>
+			<h3>Checkboxes</h3>
 				<p>Favorite Food:</p>
-				<label for="pizza"><input type="checkbox" name="food" id="pizza">Pizza</label>
-				<label for="tacos"><input type="checkbox" name="food"</label>
+				<label for="pizza">
+				<input type="checkbox" name="food" id="pizza">Pizza</label><br>
+				<label for="tacos">
+				<input type="checkbox" name="food" id="tacos" value="tacos">Tacos</label><br>
 
 			</section>
 
@@ -76,6 +79,10 @@
 				<hr>
 				<input type="submit" name="submit" id="submit" value="Submit">
 				<input type="reset" name="reset" id="reset" value="reset"><br>
+				<button> 
+    <img src="./register.svg" 
+        alt="Submit the form" height="64" width="64">
+ </button> 
 			</section>
 		</form>
 	</article>
