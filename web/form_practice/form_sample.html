@@ -59,54 +59,85 @@
         <section>
           <h3>Input <code>type="checkbox"</code></h3>
           <p>Favorite Food:</p>
-          <input type="checkbox" name="food" id="pizza">
-					<label for="pizza">Pizza</label><br>
+          <input type="checkbox" name="food" id="pizza" value="pizza" />
+          <label for="pizza">Pizza</label><br />
 
-          <input type="checkbox" name="food" id="tacos" value="tacos">
-					<label for="tacos">Tacos</label><br>
+          <input type="checkbox" name="food" id="tacos" value="tacos" />
+          <label for="tacos">Tacos</label><br />
 
-					<input type="checkbox" name="food" id="hotdogs" value="hotdogs">
-					<label for="hotdogs">Hotdogs</label><br>
+          <input type="checkbox" name="food" id="hotdogs" value="hotdogs" />
+          <label for="hotdogs">Hotdogs</label><br />
 
-					<input type="checkbox" name="food" id="hamburgers" value="hamburgers">
-					<label for="hamburgers">Hamburgers</label>
+          <input
+            type="checkbox"
+            name="food"
+            id="hamburgers"
+            value="hamburgers"
+          />
+          <label for="hamburgers">Hamburgers</label>
         </section>
 
         <section>
           <h3>Input <code>type="radio"</code></h3>
-					<p>Number of Siblings:</p>
+          <p>Number of Siblings:</p>
 
-					<input type="radio" name="siblings" id="0" value="0">
-					<label for="0">0</label>
+          <input type="radio" name="siblings" id="0" value="0" />
+          <label for="0">0</label>
 
-					<input type="radio" name="siblings" id="1" value="1">
-					<label for="1">1</label>
+          <input type="radio" name="siblings" id="1" value="1" />
+          <label for="1">1</label>
 
-					<input type="radio" name="siblings" id="2" value="2">
-					<label for="2">2</label>
+          <input type="radio" name="siblings" id="2" value="2" />
+          <label for="2">2</label>
 
-					<input type="radio" name="siblings" id="3" value="3">
-					<label for="3">3</label>
+          <input type="radio" name="siblings" id="3" value="3" />
+          <label for="3">3</label>
 
-					<input type="radio" name="siblings" id="4" value="4">
-					<label for="4">4</label>
+          <input type="radio" name="siblings" id="4" value="4" />
+          <label for="4">4</label>
 
-					<input type="radio" name="siblings" id="5" value="5">
-					<label for="5">5</label>
-					
-					<input type="radio" name="siblings" id="6" value="6">
-					<label for="6">6</label>
+          <input type="radio" name="siblings" id="5" value="5" />
+          <label for="5">5</label>
 
-					<input type="radio" name="siblings" id="more" value="more">
-					<label for="more">More</label>
+          <input type="radio" name="siblings" id="6" value="6" />
+          <label for="6">6</label>
 
+          <input type="radio" name="siblings" id="more" value="more" />
+          <label for="more">More</label>
+        </section>
+
+        <section>
+          <h2>Audio and Video</h2>
+          <video width="320" height="240" controls muted>
+            <source
+              src="./2278095-sd_640_360_30fps.mp4"
+              type="video/mp4"
+            /></video
+          ><br /><br />
+
+          <audio loop controls>
+            <source src="./sample-6s.mp3" type="audio/mp3" /></audio
+          ><br /><br />
         </section>
 
         <section>
           <h2></h2>
-        </section>
-        <section>
-          <h2></h2>
+          <label for="rating">Your Rating:</label>
+          <input
+            type="range"
+            name="rating"
+            id="rating"
+            min="1"
+            max="5"
+            list="ratings"
+          />
+          <datalist id="ratings">
+            <option value="1" label="1">1</option>
+            <option value="2" label="2">2</option>
+            <option value="3" label="3">3</option>
+            <option value="4" label="4">4</option>
+            <option value="5" label="5">5</option>
+          </datalist>
         </section>
         <section>
           <h2></h2>
