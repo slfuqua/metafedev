@@ -55,7 +55,9 @@
 		<article>
 			<h2 id="pseudo-classes">Pseudo-classes</h2>
 			<p>Pseudo-classes are used to define styles for a specific <strong>state</strong> or <strong>condition</strong> of
-				an html element. They are applied in CSS by using <code class="inline-code">selector:keyword</code>, where <code class="inline-code">keyword</code> indicates the state or condition. For example <code class="inline-code">a:hover</code>.</p>
+				an html element. They are applied in CSS by using <code class="inline-code">selector:keyword</code>, where <code
+					class="inline-code">keyword</code> indicates the state or condition. For example <code
+					class="inline-code">a:hover</code>.</p>
 			<h3>State Pseudo-classes</h3>
 			<p>State pseudo-classes are most commonly used for <code class="inline-code">&lt;anchor&gt;</code> and <code
 					class="inline-code">&lt;button&gt;</code> elements, to provide interactivity and feedback to the user.</p>
@@ -69,7 +71,8 @@
 	&lt;/ul&gt;
 				</code></pre>
 			</div>
-			<p>Above are the links for an HTML navigation bar. Below is the CSS with pseudo-classes that would typically be used
+			<p>Above are the links for an HTML navigation bar. Below is the CSS with pseudo-classes that would typically be
+				used
 				to provide interactivity.</p>
 			<div class="code-block">
 				<pre><code class="language-css">	a:link, a:visited {
@@ -85,16 +88,69 @@
 			</div>
 
 			<h3>Form Pseudo-classes</h3>
-			<p>There are a number of pseudo-classes used in forms. For example they can change the styling when input is <code class="inline-code">:valid</code> or <code class="inline-code">:invalid</code>, when an input is <code class="inline-code">:enabled</code> or <code class="inline-code">:disabled</code>, or when a checkbox is <code class="inline-code">:checked</code> or <code class="inline-code">:unchecked</code>.</p>
+			<p>There are a number of pseudo-classes used in forms. For example they can change the styling when input is <code
+					class="inline-code">:valid</code> or <code class="inline-code">:invalid</code>, when an input is <code
+					class="inline-code">:enabled</code> or <code class="inline-code">:disabled</code>, or when a checkbox is <code
+					class="inline-code">:checked</code> or <code class="inline-code">:unchecked</code>.</p>
+			<p>Here is an example form using some pseudo-classes:</p>
+			<form class="example-form">
+				<input type="text" required placeholder="Your name">
+				<input type="email" placeholder="Email (optional)">
+				<input placeholder="Enter a number from 1 to 10:" type="number" min="1" max="10">
+				<label for="checkbox">Check if you're cool:</label>
+				<input id="checkbox" type="checkbox" checked disabled>
+				<button>Submit</button>
+			</form>
+
+			<div class="code-block">
+				<pre><code class="language-html">	&lt;form class=&quot;example-form&quot;&gt;
+		&lt;input type=&quot;text&quot; required placeholder=&quot;Your name&quot;&gt;
+		&lt;input type=&quot;email&quot; placeholder=&quot;Email (optional)&quot;&gt;
+		&lt;input placeholder=&quot;Enter a number from 1 to 10:&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;
+		&lt;label for=&quot;checkbox&quot;&gt;Check if you&#x27;re cool:&lt;/label&gt;
+		&lt;input id=&quot;checkbox&quot; type=&quot;checkbox&quot; checked disabled&gt;
+		&lt;button&gt;Submit&lt;/button&gt;
+	&lt;/form&gt;
+				</code></pre>
+			</div>
+
+			<div class="code-block">
+				<pre><code class="language-css"> 		input:focus {
+			border-color: blue;
+		}
+	
+		input:valid {
+			border: 1px solid green;
+		}
+	
+		input:invalid {
+			border: 1px solid red;
+		}
+	
+		input:required {
+			background-color: #ffecec;
+		}
+	
+		button:disabled {
+			opacity: 0.5;
+		}
+	</code></pre>
+			</div>
 		</article>
 	</main>
 
 	<footer>
 
 	</footer>
+
+	<!-- Add highlight.js to add syntax highlighting to code-blocks -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+
+	<!-- Add line numbering to highlight.js -->
 	<script
 		src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+
+	<!-- Initialize the scripts -->
 	<script>
 		hljs.highlightAll();
 		hljs.initLineNumbersOnLoad();

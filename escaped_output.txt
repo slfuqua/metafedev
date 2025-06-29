@@ -1,10 +1,8 @@
-a:link,
-a:visited {
-	color: #0066cc;
-	text-decoration: none;
-}
-a:hover,
-a:active {
-	color: #004080;
-	font-weight: bold;
-}
+&lt;form class=&quot;example-form&quot;&gt;
+    &lt;input type=&quot;text&quot; required placeholder=&quot;Your name&quot;&gt;
+    &lt;input type=&quot;email&quot; placeholder=&quot;Email (optional)&quot;&gt;
+    &lt;input placeholder=&quot;Enter a number from 1 to 10:&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;
+    &lt;label for=&quot;checkbox&quot;&gt;Check if you&#x27;re cool:&lt;/label&gt;
+    &lt;input id=&quot;checkbox&quot; type=&quot;checkbox&quot; checked disabled&gt;
+    &lt;button&gt;Submit&lt;/button&gt;
+&lt;/form&gt;

@@ -26,20 +26,26 @@ aside {
 
 h1 {
 	margin: .5em 0;
+	text-align: center;
+	color: #004080;
 }
 
 h2 {
 	margin: .5em 0 .4em 0;
+	color: #0059b3;
+	padding-left: .25em;
+	background-color: #ffe380;
 }
 
 h3 {
 	margin: .5em 0 .3em 0;
+	color: #0066cc;
 }
 
 aside {
-	background-color: #ffd580;
+	background-color: #ffe380;
 	padding: .01em 0 1.25em 1em;
-	border-radius: 5px;
+	border-radius: 10px;
 	width: 225px;
 }
 
@@ -54,6 +60,48 @@ a:active {
 	font-weight: bold;
 }
 
+.example-form {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5em;
+	justify-content: flex-start;
+	max-width: 300px;
+	margin: 1em auto;
+	padding: 1em;
+	background-color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+input:invalid {
+	border: 1px solid red;
+}
+
+input:valid {
+	border: 1px solid green;
+}
+
+input:focus {
+	border-color: blue;
+}
+
+input:required {
+	background-color: #ffecec;
+}
+
+button:disabled {
+	opacity: 0.5;
+}
+
+footer {
+	margin: 1em 0;
+	padding: 0.5em;
+	border-radius: 5px;
+	text-align: center;
+}
+
+/* ---------- Code ---------- */
+
 .inline-code {
 	font-family: monospace;
 	background-color: #f0f0f0;
@@ -63,8 +111,6 @@ a:active {
 	/* font-weight: bold; */
 	font-size: larger;
 }
-
-/* ---------- Code Block ---------- */
 
 pre .language-html, pre .language-css, pre .language-js {
   tab-size: 2;
@@ -80,25 +126,5 @@ pre .language-html, pre .language-css, pre .language-js {
 	max-width: 800px;
 	min-width: 300px;
 	overflow-x: auto;
-}
-
-.copy-button {
-	position: absolute;
-	top: 6px;
-	right: 5px;
-	margin-right: .3em;
-	padding: 5px 10px;
-	background-color: darkgray;
-	color: white;
-	border: none;
-	border-radius: 3px;
-	cursor: pointer;
-}
-
-footer {
-	margin: 1em 0;
-	padding: 0.5em;
-	border-radius: 5px;
-	text-align: center;
 }
 
