@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta name="charset" content="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css-notes.css">
+	<title>CSS Notes</title>
+</head>
+
+<body>
+	<header>
+		<nav class="nav-bar">
+			<ul>
+				<li><a href="./index.html">Home</a></li>
+				<li><a href="./about.html">About</a></li>
+				<li><a href="./blog.html">Articles</a></li>
+				<li><a href=".contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<aside>
+		<h2 id="contents">Contents</h2>
+		<ul>
+			<li><a href="#combinators">Combinators</a></li>
+			<li><a href="#pseudo-classes">Pseudo-classes</a></li>
+		</ul>
+	</aside>
+	<main>
+		<h1>CSS Notes</h1>
+		<article>
+			<h2 id="combinators">Combinators</h2>
+
+			<h3>Descendant combinator</h3>
+			<p>A combinator represented by a single space (<code> </code>) character, combines two selectors such that all
+				elements matched by the second selector are selected if they have an ancestor (a parent, a parent's parent, or a
+				parent's parent's parent, etc.) element matching the first selector.</p>
+			<h3>Child combinator</h3>
+			<p>This combinator, (<code>></code>) selects only those elements matched by the second selector that are the
+				direct children of elements matched by the first. Descendant elements further down the hierarchy don't match.
+			</p>
+			<h3>Next-sibling combinator</h3>
+			<p>This combinator (<code>+</code>) is placed between two CSS selectors. It matches only those elements matched by
+				the second selector that come right after the element matched by the first selector.</p>
+			<h3>Subsequent-sibling combinator</h3>
+			<p>This combinator (<code>~</code>) separates two selectors and matches all instances of the second element that
+				follow the first element (not necessarily immediately) and share the same parent element.</p>
+		</article>
+
+		<article>
+			<h2 id="pseudo-classes">Pseudo-classes</h2>
+			<p>Pseudo-classes are used to define styles for a specific <strong>state</strong> or <strong>condition</strong> of an html element.</p>
+			<h3>State Pseudo-classes</h3>
+			<p>State pseudo-classes are most commonly used for <code>&lt;anchor&gt;</code> and <code>&lt;button&gt;</code> elements, to provide interactivity and feedback to the user.</p>
+		</article>
+	</main>
+
+	<footer>
+
+	</footer>
+</body>
+
+</html>
