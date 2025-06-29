@@ -4,6 +4,7 @@
 <head>
 	<meta name="charset" content="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/vs.min.css" />
 	<link rel="stylesheet" href="css-notes.css">
 	<title>CSS Notes</title>
 </head>
@@ -32,32 +33,72 @@
 			<h2 id="combinators">Combinators</h2>
 
 			<h3>Descendant combinator</h3>
-			<p>A combinator represented by a single space (<code> </code>) character, combines two selectors such that all
+			<p>A combinator represented by a single space (<code class="inline-code"> </code>) character, combines two
+				selectors such that all
 				elements matched by the second selector are selected if they have an ancestor (a parent, a parent's parent, or a
 				parent's parent's parent, etc.) element matching the first selector.</p>
 			<h3>Child combinator</h3>
-			<p>This combinator, (<code>></code>) selects only those elements matched by the second selector that are the
+			<p>This combinator, (<code class="inline-code">></code>) selects only those elements matched by the second
+				selector that are the
 				direct children of elements matched by the first. Descendant elements further down the hierarchy don't match.
 			</p>
 			<h3>Next-sibling combinator</h3>
-			<p>This combinator (<code>+</code>) is placed between two CSS selectors. It matches only those elements matched by
+			<p>This combinator (<code class="inline-code">+</code>) is placed between two CSS selectors. It matches only those
+				elements matched by
 				the second selector that come right after the element matched by the first selector.</p>
 			<h3>Subsequent-sibling combinator</h3>
-			<p>This combinator (<code>~</code>) separates two selectors and matches all instances of the second element that
+			<p>This combinator (<code class="inline-code">~</code>) separates two selectors and matches all instances of the
+				second element that
 				follow the first element (not necessarily immediately) and share the same parent element.</p>
 		</article>
 
 		<article>
 			<h2 id="pseudo-classes">Pseudo-classes</h2>
-			<p>Pseudo-classes are used to define styles for a specific <strong>state</strong> or <strong>condition</strong> of an html element.</p>
+			<p>Pseudo-classes are used to define styles for a specific <strong>state</strong> or <strong>condition</strong> of
+				an html element. They are applied in CSS by using <code class="inline-code">selector:keyword</code>, where <code class="inline-code">keyword</code> indicates the state or condition. For example <code class="inline-code">a:hover</code>.</p>
 			<h3>State Pseudo-classes</h3>
-			<p>State pseudo-classes are most commonly used for <code>&lt;anchor&gt;</code> and <code>&lt;button&gt;</code> elements, to provide interactivity and feedback to the user.</p>
+			<p>State pseudo-classes are most commonly used for <code class="inline-code">&lt;anchor&gt;</code> and <code
+					class="inline-code">&lt;button&gt;</code> elements, to provide interactivity and feedback to the user.</p>
+
+			<div class="code-block">
+				<pre><code class="language-html">	&lt;ul&gt;
+		&lt;li&gt;&lt;a href=&quot;./index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;./about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;./blog.html&quot;&gt;Articles&lt;/a&gt;&lt;/li&gt;
+		&lt;li&gt;&lt;a href=&quot;.contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+				</code></pre>
+			</div>
+			<p>Above are the links for an HTML navigation bar. Below is the CSS with pseudo-classes that would typically be used
+				to provide interactivity.</p>
+			<div class="code-block">
+				<pre><code class="language-css">	a:link, a:visited {
+		color: #0066cc;
+		text-decoration: none;
+	}
+
+	a:hover, a:active {
+		color: #004080;
+		font-weight: bold;
+	}
+					</code></pre>
+			</div>
+
+			<h3>Form Pseudo-classes</h3>
+			<p>There are a number of pseudo-classes used in forms. For example they can change the styling when input is <code class="inline-code">:valid</code> or <code class="inline-code">:invalid</code>, when an input is <code class="inline-code">:enabled</code> or <code class="inline-code">:disabled</code>, or when a checkbox is <code class="inline-code">:checked</code> or <code class="inline-code">:unchecked</code>.</p>
 		</article>
 	</main>
 
 	<footer>
 
 	</footer>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+	<script>
+		hljs.highlightAll();
+		hljs.initLineNumbersOnLoad();
+	</script>
 </body>
 
 </html>

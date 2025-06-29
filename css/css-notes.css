@@ -6,21 +6,22 @@
 body {
 	font-family: Arial, sans-serif;
 	line-height: 1.5;
-	font-weight: 200;
 	background-color: #f9f9f9;
 	color: #333;
 }
 
 .nav-bar {
-	margin: .2em 0;
+	margin: 1em 0;
 }
 
-.nav-bar li, aside li {
+.nav-bar li,
+aside li {
 	list-style: none;
 }
 
-main, aside {
-	margin: .5em;
+main,
+aside {
+	margin: 2em;
 }
 
 h1 {
@@ -36,22 +37,68 @@ h3 {
 }
 
 aside {
-	background-color: #FFD580;
+	background-color: #ffd580;
 	padding: .01em 0 1.25em 1em;
 	border-radius: 5px;
 	width: 225px;
 }
 
-a:link, a:visited {
+a:link,
+a:visited {
 	color: #0066cc;
 	text-decoration: none;
 }
-a:hover, a:active {
+a:hover,
+a:active {
 	color: #004080;
 	font-weight: bold;
 }
-code {
+
+.inline-code {
+	font-family: monospace;
 	background-color: #f0f0f0;
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
 	color: darkorange;
+	/* font-weight: bold; */
+	font-size: larger;
+}
+
+/* ---------- Code Block ---------- */
+
+pre .language-html, pre .language-css, pre .language-js {
+  tab-size: 2;
+  -webkit-nbsp-mode: space;
+  -moz-nbsp-mode: space;
+}
+
+.code-block {
+	position: relative;
+	border-radius: 5px;
+	border: lightgray 1px solid;
+	margin: 1em;
+	max-width: 800px;
+	min-width: 300px;
+	overflow-x: auto;
+}
+
+.copy-button {
+	position: absolute;
+	top: 6px;
+	right: 5px;
+	margin-right: .3em;
+	padding: 5px 10px;
+	background-color: darkgray;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+footer {
+	margin: 1em 0;
+	padding: 0.5em;
+	border-radius: 5px;
+	text-align: center;
 }
 
