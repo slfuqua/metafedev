@@ -31,9 +31,9 @@ h1 {
 }
 
 h2 {
-	margin: .5em 0 .4em 0;
+	margin: 1.25em 0 1em 0;
 	color: #0059b3;
-	padding-left: .25em;
+	padding: .5em;
 	background-color: #ffe380;
 }
 
@@ -42,6 +42,9 @@ h3 {
 	color: #0066cc;
 }
 
+p {
+	margin: 0.5em 0;
+}
 aside {
 	background-color: #ffe380;
 	padding: .01em 0 1.25em 1em;
@@ -93,11 +96,99 @@ button:disabled {
 	opacity: 0.5;
 }
 
+.example-table {
+	border-collapse: collapse;
+	width: 300px;
+	margin: 20px;
+	font-family: sans-serif;
+}
+
+.example-table th,
+.example-table td {
+	border: 1px solid #333;
+	padding: 8px 12px;
+	text-align: left;
+}
+
+.example-table thead {
+	background-color: #ccc;
+}
+
+.example-table tbody tr:nth-child(even) {
+	background-color: #e6f4e6; /* pale green */
+}
+
+.first {
+	border: #004080 1px solid;
+	padding: 0.5em;
+	border-radius: 5px;
+	margin: 1em 0;
+}
+
+.first p:first-of-type {
+	font-weight: bold;
+	color: white;
+	background-color: #004080;
+	padding: .75em;
+	margin: .5em 0;
+	border-radius: 5px;
+}
+
+
 footer {
 	margin: 1em 0;
 	padding: 0.5em;
 	border-radius: 5px;
 	text-align: center;
+}
+
+.pseudo-elements-table {
+	border-collapse: collapse;
+	max-width: max-content;
+	margin: 1em 0;
+	border: 1px solid #333;
+	border-radius: 5px;
+}
+
+.pseudo-elements-table thead {
+	background-color: #ccc;
+}
+
+.pseudo-elements-table th,
+.pseudo-elements-table td {
+	border: 1px solid #333;
+	padding: 8px 12px;
+	text-align: left;
+}
+
+.pseudo-elements-example {
+	border: #004080 1px solid;
+	padding: 0.5em;
+	border-radius: 5px;
+	margin: 1em 0;
+}
+
+.pseudo-elements-example h3+p::first-letter {
+	font-size: 2em;
+	font-weight: bold;
+	color: #004080;
+	float: left;
+	margin-right: 0.25em;
+}
+
+.second-paragraph::first-line {
+	font-weight: bold;
+	color: #004080;
+}
+
+.pseudo-elements-example li::marker {
+	content: "😍 ";
+	color: #004080;
+	font-weight: bold;
+}
+
+.pseudo-elements-example p:nth-child(3)::before {
+	content: "😸 ";
 }
 
 /* ---------- Code ---------- */
