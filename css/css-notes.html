@@ -95,7 +95,7 @@
 					class="inline-code">:checked</code> or <code class="inline-code">:unchecked</code>.</p>
 			<p>Here is an example form using some pseudo-classes:</p>
 			<form class="example-form">
-				<input type="text" required placeholder="Your name">
+				<input type="text" required placeholder="Your name (required)" autocomplete="name">
 				<input type="email" placeholder="Email (optional)">
 				<input placeholder="Enter a number from 1 to 10:" type="number" min="1" max="10">
 				<label for="checkbox">Check if you're cool:</label>
@@ -105,7 +105,7 @@
 
 			<div class="code-block">
 				<pre><code class="language-html">	&lt;form class=&quot;example-form&quot;&gt;
-		&lt;input type=&quot;text&quot; required placeholder=&quot;Your name&quot;&gt;
+		&lt;input type=&quot;text&quot; required placeholder=&quot;Your name&quot; autocomplete=&quot;name&quot;&gt;
 		&lt;input type=&quot;email&quot; placeholder=&quot;Email (optional)&quot;&gt;
 		&lt;input placeholder=&quot;Enter a number from 1 to 10:&quot; type=&quot;number&quot; min=&quot;1&quot; max=&quot;10&quot;&gt;
 		&lt;label for=&quot;checkbox&quot;&gt;Check if you&#x27;re cool:&lt;/label&gt;
@@ -233,8 +233,9 @@
 
 		<article id="pseudo-elements">
 			<h2>Pseudo-elements</h2>
-			<p>Pseudo-elements in CSS allow you to style specific parts of an element's content without adding extra HTML. It
-				is applied by adding a keyword to a selector, quite similar to pseudo-classes. They act as if you're selecting a
+			<p><strong>Pseudo-elements</strong> in CSS allow you to style specific parts of an element's content without
+				adding extra HTML. It is applied by adding a keyword to a selector, quite similar to seudo-classes. They act as
+				if you're selecting a
 				subpart of an element—like the first letter, first line, or a generated piece of content.</p>
 			<p>They are written with two colons (<code class="inline-code">::</code>), to distinguish them from pseudo-classes
 				which use one colon <code class="inline-code">:</code>.</p>
@@ -298,8 +299,10 @@
 					<li>Item 3</li>
 				</ul>
 			</div>
-			<p>Here is the CSS below. Note the complex selector combinations that are available to precisely select what you want.</p>
-			<p>Also note that when you use something like an emoji as the value for a <code class="inline-code">content</code> property, you must <em>close it in quotes</em> because it must be viewed as text by CSS.</p>
+			<p>Here is the CSS below. Note the complex selector combinations that are available to precisely select what you
+				want.</p>
+			<p>Also note that when you use something like an emoji as the value for a <code class="inline-code">content</code>
+				property, you must <em>close it in quotes</em> because it must be viewed as text by CSS.</p>
 			<div class="code-block">
 				<pre><code class="language-css">	.pseudo-elements-example {
 		border: #004080 1px solid;
@@ -333,6 +336,19 @@
 					</code></pre>
 			</div>
 		</article>
+
+		<!--------------- Debugging CSS ---------------->
+
+		<article id="debugging">
+			<h2>Debugging CSS</h2>
+			<p>Useful tools for debugging CSS issues include:</p>
+			<ul>
+				<li>An IDE that supports CSS, e.g., VS Code.</li>
+				<li>A linter, either an extenstion, such as Stylelint for VS Code, or an online resource.</li>
+				<li>Use a tool such as the <a href="https://jigsaw.w3.org/css-validator/">W3C's CSS Validator</a></li>
+				<li>Using any browser's DevTools. In DevTools you can inspect your code, edit CSS properties and view the results, change the viewport, copy elements and styles, and even look at the JavaScript affecting an element.</li>
+				<li>Check the specificity of your selectors.</li>
+			</ul>
 	</main>
 
 	<footer>
