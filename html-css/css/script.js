@@ -1,6 +1,6 @@
 const copyButtons = document.querySelectorAll(".copy-button");
 
-copyButtons.forEach((button) => {
+for (const button of copyButtons) {
 	button.addEventListener("click", () => {
 		const code = button.previousElementSibling.querySelector("code").innerText;
 		navigator.clipboard.writeText(code).then(() => {
@@ -10,4 +10,4 @@ copyButtons.forEach((button) => {
 			}, 2000);
 		});
 	});
-});
+}
