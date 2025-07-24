@@ -1,6 +1,6 @@
 # Scratch files
 # These files are used for testing and experimentation. They should not be committed to the repository.
-scratch.js
+js/scratch.js
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
