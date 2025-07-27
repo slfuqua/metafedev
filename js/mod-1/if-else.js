@@ -1,4 +1,4 @@
-var age = 24;
+const age = 24;
 if (typeof age === 'number') {
   if (age >= 65) {
     console.log("You get your income from a pension.");

@@ -1,4 +1,4 @@
-let age = "old";
+const age = "old";
 if (age >= 65) {
   console.log("You get your income from your pension");
 } else if (age < 65 && age >= 18) {
@@ -9,7 +9,7 @@ if (age >= 65) {
   console.log("The value of the age variable is not numerical")
 }
 
-let light = "green";
+const light = "green";
 
 switch(light) {
    case 'green':
@@ -26,7 +26,7 @@ switch(light) {
        console.log('The light is not green, orange, or red');
 }
 
-let day = "Sunday";
+const day = "Sunday";
 
 switch (day) {
   case 'Sunday':
