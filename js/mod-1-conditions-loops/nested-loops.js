@@ -13,12 +13,12 @@
 // 	}
 // }
 
-// const cubes = "ABCDEFG";
-// for (let i = 0; i < cubes.length; i++) {
-// 	const styles =
-// 		"font-size: 40px; border-radius: 10px; border: 1px solid blue; background: pink; color: purple";
-// 	console.log(`%c${cubes[i]}`, styles);
-// }
+const cubes = "ABCDEFG";
+for (let i = 0; i < cubes.length; i++) {
+	const styles =
+		"font-size: 40px; border-radius: 10px; border: 1px solid blue; background: pink; color: purple";
+	console.log(`%c${cubes[i]}`, styles);
+}
 
 // for (i = 1; i <= 10; i++) {
 //   if (i === 1) {
@@ -48,16 +48,16 @@
 // 	}
 // }
 
-for (let i = 0; i < 5; i++) {
-	if (i === 3) {
-		break; // Exits the loop when i is 3
-	}
-	console.log("Break example:", i);
-}
+// for (let i = 0; i < 5; i++) {
+// 	if (i === 3) {
+// 		break; // Exits the loop when i is 3
+// 	}
+// 	console.log("Break example:", i);
+// }
 
-for (let i = 0; i < 5; i++) {
-	if (i === 3) {
-		continue
-	}
-	console.log("Continue example:", i);
-}
+// for (let i = 0; i < 5; i++) {
+// 	if (i === 3) {
+// 		continue
+// 	}
+// 	console.log("Continue example:", i);
+// }
