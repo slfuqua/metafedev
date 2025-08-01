@@ -7,7 +7,7 @@ const txt = "Hello, World!";
 function consoleStyler(color, background, fontSize, txt) {
   // Declare a variable for the message
   // WRITE YOUR CODE HERE
-  const message = "%c" + txt;;
+  const message = "%c" + txt;
     
   // Declare a variable for the style
   // WRITE YOUR CODE HERE
@@ -68,7 +68,7 @@ function styleAndCelebrate(color, background, fontSize, txt, reason) {
 
 // Call styleAndCelebrate with appropriate arguments
 // WRITE YOUR CODE HERE
-styleAndCelebrate('ef7c8e', 'fae8e0', '30px', 'You made it!', 'champions');
+consoleStyler('#1d5c63', '#ede6db', '40px', 'Congrats!', 'champions');
 
 // Passed Test 1: successfully logged consoleStyler() variables
 // Failed Test 2: Not logging celebrateStyler() variables
