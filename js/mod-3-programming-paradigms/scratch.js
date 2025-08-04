@@ -10,7 +10,7 @@ function meal(animal) {
     animal.food = animal.food + 10;
 }
 
-var dog = {
+const dog = {
     food: 10
 };
 meal(dog);
@@ -33,4 +33,6 @@ console.log(dog.food); // Output: 30
     }
 
     console.log(calculate(two, one));
+
+    
 

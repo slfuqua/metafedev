@@ -7,7 +7,7 @@ const txt = "Hello, World!";
 function consoleStyler(color, background, fontSize, txt) {
   // Declare a variable for the message
   // WRITE YOUR CODE HERE
-  const message = "%c" + txt;
+  const message = `%c${txt}`;
     
   // Declare a variable for the style
   // WRITE YOUR CODE HERE
@@ -35,13 +35,13 @@ function celebrateStyler(reason) {
   // If reason is "birthday", log a congrats message
   // WRITE YOUR CODE HERE
   if (reason === 'birthday') {
-    console.log(`%cHappy Birthday`, fontStyle);
+    console.log('%cHappy Birthday', fontStyle);
   }
   
   // Check if the reason is "champions"
   // WRITE YOUR CODE HERE
   else if (reason === 'champions') {
-    console.log(`%cCongrats on the title!`, fontStyle);
+    console.log('%cCongrats on the title!', fontStyle);
   }
 
   // For any other reason, log a default message
