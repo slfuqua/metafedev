@@ -1,38 +1,57 @@
-// var globalVar = 77;
+// const colors = ['red', 'green', 'blue', 'yellow', 'purple', 'orange'];
 
-// function scopeTest() {
-//     var localVar = 88;
+// for (let color of colors) {
+//   console.log(color)
 // }
 
-// console.log(localVar);
+// const car = {
+//   speed: 200,
+//   color: 'red'
+// }
+// console.log(Object.keys(car)); // [ 'speed', 'color' ]
+// console.log(Object.values(car)); // [ 200, 'red' ]
+// console.log(Object.entries(car)); // [ [ 'speed', 200 ], [ 'color', 'red' ] ]
 
-function meal(animal) {
-    animal.food = animal.food + 10;
+// var clothingItem = {
+//     price: 50,
+//     color: 'beige',
+//     material: 'cotton',
+//     season: 'autumn'
+// }
+
+// for (const key of Object.keys(clothingItem)) {
+//   console.log(`${key}: ${clothingItem[key]}`)
+// }
+
+// function testBracketsDynamicAccess() {
+//   var dynamicKey;
+//   if (Math.random() > 0.5) {
+//     dynamicKey = "speed";
+//   } else {
+//     dynamicKey = "color";
+//   }
+
+//   var drone = {
+//     speed: "15",
+//     color: "orange"
+//   }
+//   // Log the value of the property specified by dynamicKey to demonstrate dynamic property access
+//     console.log(drone[dynamicKey]);
+// }
+
+// testBracketsDynamicAccess();
+
+function makeCounter() {
+  let count = 0; // This variable is private to makeCounter
+
+  return function() {
+    count++;
+    return count;
+  };
 }
 
-const dog = {
-    food: 10
-};
-meal(dog);
-meal(dog);
-
-// console.log(dog.food);
-console.log(dog.food); // Output: 30
-
-
-    function two() {
-        return 2;
-    }
-
-    function one() {
-        return 1;
-    }
-
-    function calculate(initialValue, incrementValue) {
-        return initialValue() + incrementValue() + incrementValue();
-    }
-
-    console.log(calculate(two, one));
-
-    
+const counter1 = makeCounter();
+console.log(counter1()); // 1
+console.log(counter1()); // 2
+console.log(counter1()); // 3
 
