@@ -41,17 +41,29 @@
 
 // testBracketsDynamicAccess();
 
-function makeCounter() {
-  let count = 0; // This variable is private to makeCounter
+// function makeCounter() {
+//   let count = 0; // This variable is private to makeCounter
 
-  return function() {
-    count++;
-    return count;
-  };
+//   return function() {
+//     count++;
+//     return count;
+//   };
+// }
+
+// const counter1 = makeCounter();
+// console.log(counter1()); // 1
+// console.log(counter1()); // 2
+// console.log(counter1()); // 3
+
+function Person(name) {
+  this.name = name;
+  console.log("Constructor ran for:", name);
 }
 
-const counter1 = makeCounter();
-console.log(counter1()); // 1
-console.log(counter1()); // 2
-console.log(counter1()); // 3
+let p1 = new Person("Alice");
+console.log(p1.name); // "Alice"
+console.log(p1["name"]); // "Alice"
 
+class BankAccount {
+  constructor(owner, balance)
+}
