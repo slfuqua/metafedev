@@ -27,7 +27,7 @@
 //   console.log(`${key}: ${value}`);
 // }
 
-// //  But we can also use for...in:
+// //  But we can also use for...in which retrieves keys of an object:
 // for (const key in car) {
 //   console.log(`${key}: ${car[key]}`);
 // }
@@ -61,5 +61,4 @@ var clothingItem = {
       }
     }
   }
-};
-    
+};    
