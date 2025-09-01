@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h1>A Form Playground</h1>
+	<main>
+		<form action="https://httpbin.org/post" method="post">
+			<article>
+				<!-- Text fields with a fieldset -->
+				<fieldset>
+					<legend>Contact Information</legend>
+					<label for="firstName">First Name:</label><br>
+					<input type="text" name="firstName" id="firstName" required autofocus autocomplete="given-name"><br>
+					<label for="lastName">Last Name:</label><br>
+					<input type="text" name="lastName" id="lastName" autocomplete="family-name"><br>
+					<label for="tel">Telephone Number:</label><br>
+					<input type="tel" id="tel" name="tel" autocomplete="tel">
+				</fieldset>
+			</article>
+
+			<!--  -->
+
+			<article>
+				<h2>Interactive Elements</h2>
+
+				<h3>The &ltselect&gt Element</h3>
+				<label for="coffee">Favorite Coffee:</label><br>
+				<select name="coffee" id="coffee" multiple size="8">
+					<optgroup label="Coffees">
+						<option value="regular coffee">Regular Coffee</option>
+						<option value="iced coffee">Iced Coffee</option>
+					</optgroup>
+					<hr>
+					<optgroup label="Espresso Drinks">
+						<option value="cappuccino">Cappuccino</option>
+						<option value="latte">Latte</option>
+						<option value="americano">Americano</option>
+						<option value="other">Other</option>
+					</optgroup>
+				</select>
+			</article>
+
+			<article>
+				<h3>Input <code>type="checkbox"</code></h3>
+				<p>Favorite Food:</p>
+				<input type="checkbox" name="food" id="pizza" value="pizza">
+				<label for="pizza">Pizza</label><br>
+
+				<input type="checkbox" name="food" id="tacos" value="tacos">
+				<label for="tacos">Tacos</label><br>
+
+				<input type="checkbox" name="food" id="hotdogs" value="hotdogs">
+				<label for="hotdogs">Hotdogs</label><br>
+
+				<input type="checkbox" name="food" id="hamburgers" value="hamburgers">
+				<label for="hamburgers">Hamburgers</label>
+			</article>
+
+			<article>
+				<h3>Input <code>type="radio"</code></h3>
+				<p>Number of Siblings:</p>
+
+				<input type="radio" name="siblings" id="0" value="0">
+				<label for="0">0</label>
+
+				<input type="radio" name="siblings" id="1" value="1">
+				<label for="1">1</label>
+
+				<input type="radio" name="siblings" id="2" value="2">
+				<label for="2">2</label>
+
+				<input type="radio" name="siblings" id="3" value="3">
+				<label for="3">3</label>
+
+				<input type="radio" name="siblings" id="4" value="4">
+				<label for="4">4</label>
+
+				<input type="radio" name="siblings" id="5" value="5">
+				<label for="5">5</label>
+
+				<input type="radio" name="siblings" id="6" value="6">
+				<label for="6">6</label>
+
+				<input type="radio" name="siblings" id="more" value="more">
+				<label for="more">More</label>
+			</article>
+
+			<article>
+				<h2></h2>
+			</article>
+
+			<article>
+				<hr>
+				<input type="submit" name="submit" id="submit" value="Submit">
+				<input type="reset" name="reset" id="reset" value="reset"><br>
+				<!-- <button>
+            <img
+              src="./register.svg"
+              alt="Submit the form"
+              height="64"
+              width="64"
+           >
+          </button> -->
+			</article>
+		</form>
+		<hr style="border-top: 2px solid black">
+
+		<article>
+			<h2>Image Element with <code>&ltfigure&gt;</code> and
+				<code>&ltfigurecap&gt</code>
+			</h2>
+			<figure>
+				<img src="./liesure_cat.JPG" alt="A liesurely cat." width="300">
+				<figcaption>A liesurely cat.</figcaption>
+			</figure>
+		</article>
+
+		<article>
+			<h2>Audio and Video Elements</h2>
+			<figure>
+				<figcaption>Testing an embeded audio file:</figcaption><br>
+				<audio controls loop muted>
+					<source src="./file_example_MP3_700KB.mp3" type="audio/mpeg">
+					<source src="./file_example_WAV_1MG.wav" type="audio/wav">
+				</audio>
+			</figure>
+
+			<figure>
+				<figcaption>Testing an embedded video file:</figcaption><br>
+				<video controls width="320" height="240">
+					<source src="./2278095-sd_640_360_30fps.mp4" type="video/mp4">
+				</video>
+			</figure>
+
+			<form action="https://httpbin.org/post" method="post">
+				<label for="rating">Your rating of the video:</label><br>
+				<input type="range" name="rating" id="rating" max="5" min="1" list="ratings">
+				<!-- datalist>option[value="$"]{$}*5 -->
+				<datalist id="ratings">
+					<option value="1"></option>
+					<option value="2"></option>
+					<option value="3"></option>
+					<option value="4"></option>
+					<option value="5"></option>
+				</datalist>
+				<p><button>Submit</button></p>
+			</form>
+		</article>
+
+		<article>
+			<h2></h2>
+		</article>
+
+		<article>
+			<h2></h2>
+		</article>
+
+		<article>
+			<h2></h2>
+		</article>
+	</main>
+</body>
+
+</html>

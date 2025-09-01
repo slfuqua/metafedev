@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Methods</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Some Commonly Used DOM Methods</h1>
+      <p id="intro">
+        This page will cover commonly used DOM methods that are accessed with
+        JavaScript.
+      </p>
+    </header>
+
+    <main>
+      <section>
+        <h2>Finding Elements with JavaScript</h2>
+        <h3>Finding an HTML Element by Id</h3>
+        <p id="ex2">Print this entire element to the console.</p>
+        <button id="button2">Print Output</button>
+
+        <script>
+          const ex2 = document.getElementById("ex2");
+          const button2 = document.getElementById("button2");
+          button2.addEventListener("click", () => {
+            return console.log(ex2);
+          });
+        </script>
+
+        <h3>Finding HTML Elements by Tag Name</h3>
+        <div id="ex3">
+          <p>Print these two paragraph elements to the console.</p>
+          <p>
+            And use array indexing and the <code>style</code> property to turn
+            this second element bold.
+          </p>
+          <button id="button3">Print Output and Change Style</button>
+        </div>
+
+        <script>
+          const button3 = document.getElementById("button3");
+          // First get the div and its contents
+          const getDiv = document.getElementById("ex3");
+          // Then get all of the <p> elements within it, in an array
+          const getP = getDiv.getElementsByTagName("p");
+          button3.addEventListener("click", () => {
+            for (const item of getP) {
+              console.log(item);
+            }
+            // Use indexing to get an item out of the array
+            getP[1].style.fontWeight = "bold";
+          });
+        </script>
+
+        <h3>Finding HTML Elements by Class Name</h3>
+        <p class="ex5 ex4">
+          The <code>getElementByClass()</code> method is used to retrieve all
+          members of a class, or classes.
+        </p>
+        <p class="ex4 ex5">
+          We can retrieve all elements with one or multiple class names. And
+          since it returns an array, we can also access its members using
+          indexing. When using mulitple classes,
+          <code>getElementByClass()</code>, only works on those elements
+          including both, of the elements.
+        </p>
+        <p class="ex5 ex4">
+          In this example we will first change the styling of all three of these
+          first three paragraphs with the <code>class="ex4"</code> AND
+          <code>class="ex5"</code> selectors. And we will change the background
+          color of the middle paragraph with indexing.
+        </p>
+        <p class="ex4">
+          It will not work on this paragraph, because it only has a class of
+          <code>ex5</code>, which is listed second in the method.
+        </p>
+        <p class="ex5">
+          Or this paragragh that only has <code>ex5</code> as its class.
+        </p>
+        <button id="button4">Change the Styles</button>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", () => {
+            const getClass = document.getElementsByClassName("ex4 ex5"); // or "ex4 ex5"
+            const button4 = document.getElementById("button4");
+
+            button4.addEventListener("click", () => {
+              // getElementsByClassName returns an array that we can iterate
+              for (const elem of getClass) {
+                elem.style.border = "1px solid black";
+                elem.style.padding = "1em";
+              }
+              // highlight the second element; make sure it exitst
+              if (getClass[1]) {
+                getClass[1].style.backgroundColor = "yellow";
+              }
+            });
+          });
+        </script>
+        <!-- Need to add next, "Finding HTML elements by CSS Selectors" -->
+        <!-- https://www.w3schools.com/js/js_htmldom_elements.asp -->
+      </section>
+
+      <hr />
+
+      <section>
+        <h2>Modifying HTML with Javascript</h2>
+        <h3>Using <code>innerHTML</code></h3>
+        <p id="ex1">This is the original text.</p>
+        <button id="button1">Change Text</button><br />
+
+        <script>
+          const ex1 = document.getElementById("ex1");
+          const button1 = document.getElementById("button1");
+          button1.addEventListener("click", () => {
+            ex1.innerHTML = "My new text using <code>innerHTML</code>.";
+          });
+        </script>
+      </section>
+    </main>
+    <!-- <script src="script.js"></script> -->
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>highlight.js Demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/styles/vs.min.css" />
+	<link rel="stylesheet" href="css-notes.css">
+</head>
+
+<body>
+<main>
+	<div class="code-block">
+		<button class="copy-button">Copy</button>
+		<pre><code class="language-html"> &lt;header&gt;
+			&lt;nav class=&quot;nav-bar&quot;&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href=&quot;./index.html&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;./about.html&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;./blog.html&quot;&gt;Articles&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href=&quot;.contact.html&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/nav&gt;
+		&lt;/header&gt;
+			</code></pre>
+	</div>
+	<h2>A Code-Block Template</h2>
+	<div class="code-block">
+		<pre><code class="language-css">	</code></pre>
+	</div>
+
+</main>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.0/highlight.min.js"></script>
+	<script
+		src="//cdnjs.cloudflare.com/ajax/libs/highlightjs-line-numbers.js/2.9.0/highlightjs-line-numbers.min.js"></script>
+	<script>
+			hljs.highlightAll();
+			hljs.initLineNumbersOnLoad();
+	</script>
+
+</body>
+
+</html>

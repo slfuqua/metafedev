@@ -1,0 +1,23 @@
+type,description,example,common attributes
+text,Single-line text input,"<input type=""text"" name=""username"" placeholder=""Enter your name"">",name id placeholder maxlength minlength required
+password,Password field (obscured input),"<input type=""password"" name=""password"" required>",name id required minlength maxlength
+email,Email address with format validation,"<input type=""email"" name=""email"" placeholder=""you@example.com"">",name id required multiple placeholder
+tel,Telephone number input,"<input type=""tel"" name=""phone"" placeholder=""+1234567890"">",name id pattern placeholder
+url,URL input with validation,"<input type=""url"" name=""website"" placeholder=""https://example.com"">",name id required placeholder
+number,Numeric input with optional limits,"<input type=""number"" name=""age"" min=""0"" max=""120"">",name id min max step required
+range,Slider for numeric input,"<input type=""range"" name=""volume"" min=""0"" max=""100"">",name id min max step
+date,Date picker,"<input type=""date"" name=""birthdate"">",name id min max required
+time,Time picker,"<input type=""time"" name=""appointment"">",name id min max step
+datetime-local,Date and time input (no timezone),"<input type=""datetime-local"" name=""meeting"">",name id min max step
+month,Month and year selector,"<input type=""month"" name=""billing-month"">",name id min max
+week,Week number picker,"<input type=""week"" name=""weeknum"">",name id min max
+checkbox,Checkbox for boolean choices,"<input type=""checkbox"" name=""subscribe"" checked>",name id value checked
+radio,Single choice in a group,"<input type=""radio"" name=""gender"" value=""female"">",name id value checked
+file,File uploader,"<input type=""file"" name=""resume"" accept="".pdf .doc"">",name id accept multiple required
+submit,Submit button for a form,"<input type=""submit"" value=""Send"">",name id value formaction formenctype formmethod formtarget
+reset,Reset button to clear form,"<input type=""reset"" value=""Clear"">",name id value
+button,Generic button (for JS or styling),"<input type=""button"" value=""Click me"">",name id value onclick
+color,Color picker input,"<input type=""color"" name=""favcolor"" value=""#ff0000"">",name id value
+hidden,Hidden input not shown to users,"<input type=""hidden"" name=""formID"" value=""12345"">",name id value
+image,Image-based submit button,"<input type=""image"" src=""submit.png"" alt=""Submit"">",src alt width height formmethod formaction
+search,Styled text box for search,"<input type=""search"" name=""q"" placeholder=""Search..."">",name id placeholder
