@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
 </head>
+
 <body>
 	<p id="p1">Hello World!</p>
 	<button id="b1" type="button">Change the Text</button>
@@ -17,18 +19,20 @@
 		}
 	</script>
 
-	<h3>Changing the Value of an Attribute</h3>	
-	<p>To change the value of an attribute, we us the <code>&ltimg&gt</code> object's <code>attribute</code> property. In this example we will change the <code>&ltsrc&gt</code> attribute.</p>
+	<h3>Changing the Value of an Attribute</h3>
+	<p>To change the value of an attribute, we us the <code>&ltimg&gt</code> object's <code>attribute</code> property. In
+		this example we will change the <code>&ltsrc&gt</code> attribute.</p>
 	<p><img id="cat" src="sanguin_cat.jpg" alt="Sanguin Cat" style="width:300px"></p>
 	<button id="b2" type="button">Change the Cat!</button>
 
 	<script>
-		const button = document.getElementById('b2');
+		const button2 = document.getElementById('b2');
 		const cat = document.getElementById('cat');
-		button.onclick = () => {
+		button2.onclick = () => {
 			cat.src = "happy_cat.jpg";
 		};
 	</script>
 
 </body>
+
 </html>
