@@ -44,6 +44,8 @@ h3 {
 
 code {
 	color: rgb(225, 132, 26);
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: bold;
 }
 
 button {
@@ -55,8 +57,26 @@ button {
 	cursor: pointer;
 }
 
-hr {
+.section-hr {
 	border: none;
-	border-top: .3em solid rgb(221, 168, 108);
-	margin: 1em 0;
+	border-top: .5em solid rgb(221, 168, 108);
+	margin: 1.5em 0 1.5em 0;
+}
+
+.sub-section-hr {
+	border: none;
+	border-top: .2em solid rgb(221, 168, 108);
+	margin: 1.25em 0 1.25em 0;
+}
+
+input[type="text"] {
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+	border-color: rgb(225, 132, 26);
+	outline: none;
+	box-shadow: 0 0 5px rgba(225, 132, 26, 0.5);
 }
