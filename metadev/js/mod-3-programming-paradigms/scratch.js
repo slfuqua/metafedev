@@ -55,15 +55,15 @@
 // console.log(counter1()); // 2
 // console.log(counter1()); // 3
 
-function Person(name) {
-  this.name = name;
-  console.log("Constructor ran for:", name);
-}
+// function Person(name) {
+//   this.name = name;
+//   console.log("Constructor ran for:", name);
+// }
 
-let p1 = new Person("Alice");
-console.log(p1.name); // "Alice"
-console.log(p1["name"]); // "Alice"
+// const p1 = new Person("Alice");
+// console.log(p1.name); // "Alice"
+// console.log(p1["name"]); // "Alice"
 
-class BankAccount {
-  constructor(owner, balance)
-}
+// class BankAccount {
+//   constructor(owner, balance)
+// }
