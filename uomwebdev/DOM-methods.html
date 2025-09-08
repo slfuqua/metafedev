@@ -165,8 +165,45 @@
 		<form>
 			<h2>JavaScript Form Validation</h2>
 
-			<h3>Required Fields</h3>
-			<p>This 'Name' field is marked as required in the HTML.</p>
+			<h3>Input Validation</h3>
+			<p>HTML5 has a number of built-in validation attributes for form inputs, such as <code>pattern</code> for phone
+				numbers or passwords, <code>min</code> and <code>max</code> for numbers or amounts, <code>required</code>, and
+				input <code>type</code> for <code>email</code>, <code>url</code>, etc. But there are many checks that HTML can't
+				complete, like checking a server for available usernames, making sure that a confirmed password matches the
+				original, or giving custom feedback on password strength.</p>
+
+			<form action="https://httpbin.org/post" method="post" id="num-form">
+				<p>
+					<label for="email">Enter your email:</label>
+					<input type="text" id="email" name="email">
+				</p>
+				<label for="numButton"></label>
+				<button type="submit" id="numButton">Submit</button>
+			</form>
+
+			<script>
+				const email = document.getElementById("email");
+
+				// Live feedback as they type
+				email.addEventListener("input", () => {
+					if (!email.validity.valid) {
+						email.setCustomValidity("Invalid email format.");
+					} else {
+						email.setCustomValidity("");
+					}
+				});
+
+				// Final check when leaving the field
+				email.addEventListener("blur", () => {
+					email.reportValidity();
+				});
+			</script>
+			<hr class="sub-section-hr">
+
+			<h3>Custom Errors</h3>
+			<p>If you need a custom error message instead of the default HTML message, JavaScript can provide this using
+				<code>setCustomValidity</code>.
+			</p>
 			<form action="https://httpbin.org/post" method="post" id="name-form">
 				<label for="fname">Name:</label>
 				<input type="text" id="fname" name="fname"><br><br>
@@ -191,28 +228,8 @@
 						fname.setCustomValidity(""); // clear error
 					}
 				});
-
 			</script>
-
-			<h3>Input Validation</h3>
-			<p>We can use JavaScript to make sure that our forms are filled out properly <em>before</em> the data is sent to
-				our server. This reduces bandwidth use, as well as the server's workload. Below is an example of checking to
-				make sure that a number between 1 and 10 is entered.</p>
-			<p>
-			<form action="https://httpbin.org/post" method="post" id="num-form">
-				<label for="number">Enter a number between 1 and 10:</label>
-				<input type="text" id="number" name="number" required aria-required="true">
-				</p>
-				<label for="numButton"></label>
-				<button type="submit" id="numButton">Submit</button>
-			</form>
-
-			<script>
-				const form = document.getElementById("num-form");
-				form.addEventListener('submit', (event) => {
-					if ()
-				})
-			</script>
+			<hr class="sub-section-hr">
 
 			</section>
 			<hr class="section-hr">
