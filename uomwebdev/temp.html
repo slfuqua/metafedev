@@ -19,18 +19,33 @@
 		}
 	</script>
 
-	<h3>Changing the Value of an Attribute</h3>
-	<p>To change the value of an attribute, we us the <code>&ltimg&gt</code> object's <code>attribute</code> property. In
-		this example we will change the <code>&ltsrc&gt</code> attribute.</p>
-	<p><img id="cat" src="sanguin_cat.jpg" alt="Sanguin Cat" style="width:300px"></p>
-	<button id="b2" type="button">Change the Cat!</button>
-
+	<h3>Input Validation</h3>
+	<p>JavaScript can be used for validating form inputs. Without JS, the form is only checked for validity when the submit button is pressed. We can use JS to actually check the input as soon as the user exits the input box. That way they can make corrections as they go.</p>
+	<p>The code below uses the method <code>reportValidity()</code> to trigger the browser's built-in form validation UI for an element or full form. We are going to use JavaScript's <code>blur</code> event, which occurs when an element loses focus, i.e., when the user moves to another element. We have set the text input's <code>type</code> to "email", and have made it <code>required</code>.</p>
+	<form action="https://httpbin.org/post" method="post" id="num-form">
+		<p> <label for="email">Enter your email:</label>
+			<input type="email" id="email" name="email" required aria-required="true">
+		</p>
+		<label for="numButton"></label>
+		<button type="submit" id="numButton">Submit</button>
+	</form>
 	<script>
-		const button2 = document.getElementById('b2');
-		const cat = document.getElementById('cat');
-		button2.onclick = () => {
-			cat.src = "happy_cat.jpg";
-		};
+		const email = document.getElementById("email");
+
+		// Live feedback as they type DON'T DO THIS!!
+		// email.addEventListener("input", () => {
+		// 	if (email.validity.typeMismatch) {
+		// 		email.setCustomValidity("Invalid email format.");
+		// 	} else {
+		// 		email.setCustomValidity("");
+		// 	}
+		// 	email.reportValidity();
+		// });
+
+		// Final check when leaving the field 
+		email.addEventListener("blur", () => {
+			email.reportValidity();
+		}); 
 	</script>
 
 </body>
