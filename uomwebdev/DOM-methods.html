@@ -6,18 +6,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>DOM Methods</title>
 	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
 </head>
 
 <body>
 	<div class="container">
 		<header>
-<h1>COMPUTERPHILO</h1>
+			<h1>COMPUTERPHILO</h1>
 		</header>
 		<nav>
-<ul>
-	<li><a href="#">About</a></li>
-	<li><a href="#">Contact</a></li>
-</ul>
+			<ul>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
 		</nav>
 
 		<div class="top-bar">
@@ -55,22 +57,23 @@
 							And use array indexing and the <code>style</code> property to turn
 							this second element bold.
 						</p>
+						<pre><code class="language-javascript">
+									const button9 = document.getElementById("button3");
+									// First get the div and its contents
+									const getDiv = document.getElementById("ex3");
+									// Then get all of the <p> elements within it, in an array
+									const getP = getDiv.getElementsByTagName("p");
+									button9.addEventListener("click", () => {
+										for (const item of getP) {
+											console.log(item);
+										}
+										// Use indexing to get an item out of the array
+										getP[1].style.fontWeight = "bold";
+									});
+							</code></pre>
 						<button id="button3">Print Output and Change Style</button>
 					</div>
-					<script>
-						const button3 = document.getElementById("button3");
-						// First get the div and its contents
-						const getDiv = document.getElementById("ex3");
-						// Then get all of the <p> elements within it, in an array
-						const getP = getDiv.getElementsByTagName("p");
-						button3.addEventListener("click", () => {
-							for (const item of getP) {
-								console.log(item);
-							}
-							// Use indexing to get an item out of the array
-							getP[1].style.fontWeight = "bold";
-						});
-					</script>
+
 				</article>
 				<hr class="sub-section-hr">
 
@@ -193,9 +196,16 @@
 					<h3 id="input-valid">Input Validation</h3>
 					<p>HTML5 has a number of built-in validation attributes for form inputs, such as <code>pattern</code> for phone numbers or passwords, <code>min</code> and <code>max</code> for numbers or amounts, <code>required</code>, and
 						input <code>type</code> for <code>email</code>, <code>url</code>, <code>number</code>, etc. But there are many
+					<p>HTML5 has a number of built-in validation attributes for form inputs, such as <code>pattern</code> for
+						phone
+						numbers or passwords, <code>min</code> and <code>max</code> for numbers or amounts, <code>required</code>,
+						and
+						input <code>type</code> for <code>email</code>, <code>url</code>, <code>number</code>, etc. But there are
+						many
 						checks that HTML can't
 						complete, like checking a server for available usernames, making sure that a confirmed password matches the
-						original, giving custom feedback on password strength or any other input, or triggering validation checks when
+						original, giving custom feedback on password strength or any other input, or triggering validation checks
+						when
 						exiting an input instead of waiting for the submit button to be clicked.</p>
 					<p>Without JS, the form is only checked for validity
 						when the submit button is pressed. We can use JS to actually check the input as soon as the user exits the
@@ -203,7 +213,8 @@
 						box. That way they can make corrections as they go.</p>
 					<p>The code below uses the method <code>reportValidity()</code> to trigger the browser's built-in form
 						validation
-						UI for an element or full form. We are going to use JavaScript's <code>blur</code> event, which occurs when an
+						UI for an element or full form. We are going to use JavaScript's <code>blur</code> event, which occurs when
+						an
 						element
 						loses focus, i.e., when the user moves to another element. We have set the text input's <code>type</code> to
 						"email",
