@@ -20,7 +20,6 @@ body {
 
 .container {
 	display: grid;
-	width: 95%;;
 	height: 100%; /* Full viewport height */
 	grid-template-areas:
 		"header"
@@ -38,9 +37,9 @@ body {
 }
 
 /* Header Styles */
-header {
+	header {
 	grid-area: header;
-	padding: 1em 0 .25em 1.5em;
+	padding: 1em 0 .25em 1em;
 	margin-bottom: .5em;
 }
 
@@ -51,12 +50,13 @@ header h1 {
 }
 
 /* Nav Styles */
-nav {
+	nav {
 	grid-area: nav;
 	display: grid;
 	justify-items: left;
 	align-items: center;
-	padding: 0 1.25em 1em .25em;
+	padding-right: 1.25em;
+	padding-bottom: 1em;
 }
 
 nav ul {
@@ -91,7 +91,7 @@ nav ul li a:hover {
 }
 
 /* Main Content Styles */
-main {
+	main {
 	border-top: 1px solid #eee; /* Separator below header */
 	padding: 1em 1.5em;
 	padding-right: 2em;
@@ -113,7 +113,7 @@ main h1 {
 
 /* Section Styles */
 
-section {
+	section {
 	margin-bottom: 1em;
 }
 
@@ -132,7 +132,7 @@ section h3 {
 }
 
 /* Article Styles */
-article {
+	article {
 	margin-bottom: .75em;
 	padding-bottom: 1em;
 	border-bottom: 1px solid #e6e6e6; /* Separator between articles */
@@ -164,13 +164,13 @@ article p {
 }
 
 /* Aside Styles */
-aside {
+	aside {
 	grid-area: aside;
 	/* position: sticky;
 	top: 1em; */
 	align-self: start;
 	/* background-color: #f4f4f4; */
-	padding: 1em 1em 1.25em 1.5em;
+	padding: 1.75em 1em;
 	border-left: 5px solid rgb(26, 119, 225);
 	/* margin-top: 1em; */
 	/* height: 100%; */
@@ -200,7 +200,7 @@ aside ul ul {
 }
 
 /* Form Styles */
-input {
+	input {
 	border: 1px solid #ccc;
 	padding: 0.5em;
 	border-radius: 4px;
@@ -213,7 +213,7 @@ input:focus {
 }
 
 /* Footer Styles */
-footer {
+	footer {
 	grid-area: footer;
 	text-align: center;
 	padding: 1.25em;
@@ -225,7 +225,7 @@ footer {
 
 /* Miscellaneous Styles */
 
-code {
+	code {
 	color: rgb(225, 132, 26);
 	font-family: "Courier New", Courier, monospace;
 	font-weight: bold;
@@ -233,16 +233,12 @@ code {
 
 button {
 	background-color: rgb(26, 119, 225);
-	font-size: .85em;
 	color: #fff;
 	border: none;
 	padding: 5px 15px;
 	border-radius: 5px;
 	cursor: pointer;
-	display: block;
-	margin-left: auto;
 }
-
 button:hover {
 	background-color: rgb(225, 132, 26);
 }
@@ -299,7 +295,7 @@ img {
 		display: grid;
 		justify-items: right;
 		align-items: center;
-		padding: 1em 0 .5em 0;
+		padding-right: 1.25em;
 	}
 
 	header {
@@ -307,13 +303,4 @@ img {
 		padding: 1em 1.5em .5em 1.5em;
 		margin-bottom: .5em;
 	}
-}
-
-button {
-	background-color: rgb(26, 119, 225);
-	color: #fff;
-	border: none;
-	padding: 5px 15px;
-	border-radius: 5px;
-	cursor: pointer;
 }
