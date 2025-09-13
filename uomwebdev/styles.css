@@ -22,13 +22,13 @@ body {
 	display: grid;
 	height: 100%; /* Full viewport height */
 	grid-template-areas:
-		"header"
-		"nav"
-		"top-bar"
-		"aside"
-		"main"
-		"footer";
-	grid-template-columns: 1fr;
+		"header header nav"
+		"top-bar top-bar top-bar"
+		"main main aside"
+		"footer footer footer";
+	grid-template-columns: auto auto 225px;
+	grid-template-rows: auto auto 1fr auto;
+	max-width: 900px; /* Limit content width for readability */
 	margin: 20px auto; /* Center the container and add vertical spacing */
 	/* padding: 20px; */
 	background-color: #fff; /* White background for content area */
@@ -113,7 +113,7 @@ main h1 {
 
 /* Section Styles */
 
-	section {
+section {
 	margin-bottom: 1em;
 }
 
@@ -170,9 +170,9 @@ article p {
 	top: 1em; */
 	align-self: start;
 	/* background-color: #f4f4f4; */
-	padding: 1.75em 1em;
+	padding: .75em 1em;
 	border-left: 5px solid rgb(26, 119, 225);
-	/* margin-top: 1em; */
+	margin-top: 1em;
 	/* height: 100%; */
 }
 

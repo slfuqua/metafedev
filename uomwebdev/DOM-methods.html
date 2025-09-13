@@ -244,18 +244,20 @@
 						});
 					</script>
 				</article>
-				<!-- <hr class="sub-section-hr"> -->
+
 				<article>
 					<h3 id="custom-error">Custom Errors</h3>
 					<p>If you need a custom error message instead of the default HTML message, JavaScript can provide this using
 						<code>setCustomValidity</code>.
 					</p>
 					<form action="https://httpbin.org/post" method="post">
+						<p>An example of the regular HTML warning for a required field:</p>
 						<label for="name">Name:</label>
 						<input type="text" id="name" name="name" required><br><br>
 						<button type="submit">Submit</button>
 					</form><br>
 					<form action="https://httpbin.org/post" method="post" id="name-form">
+						<p>An example of a custom error:</p>
 						<label for="fname">Name:</label>
 						<input type="text" id="fname" name="fname"><br><br>
 						<button type="submit">Submit</button>
@@ -291,6 +293,10 @@
 					<li><a class="h3" href="#by-tag">Find an HTML Element by Tag Name</a></li>
 					<li><a class="h3" href="#by-class">Find an HTML Element by Class</a></li>
 					<li><a class="h3" href="#by-selector">Find an HTML element by CSS Selector</a></li>
+				</ul>
+				<li><a href="#modify-elems" class="h2">Modifying HTML Elements</a></li>
+				<ul>
+					
 				</ul>
 			</ul>
 		</aside>
