@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>DOM Methods</title>
 	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 </head>
 
 <body>
@@ -27,25 +28,27 @@
 		<main>
 			<h1>Some Commonly Used DOM Methods</h1>
 			<p class="intro">
-				This page will cover commonly used DOM methods that are accessed with
-				JavaScript.
+				The DOM (Document Object Model) methods let JavaScript interact with HTML elements in a web page. Here’s a brief
+				overview of some of the most common ones.
 			</p>
 			<section>
-				<h2 id="find-elems">Finding Elements with JavaScript</h2>
+				<h2 id="find-elems">Selecing Elements</h2>
 
 				<article id="by-Id">
 					<h3>Find an HTML Element by Id</h3>
 					<p id="ex2">Click the button below to print this entire element to the console.</p>
 					<button id="button2">Print Output</button>
+					<pre><code>	const ex2 = document.getElementById("ex2");
+	const button2 = document.getElementById("button2");
+
+	button2.addEventListener("click", () => {
+		return console.log(ex2);
+	});
+					</code></pre>
 					<script>
-						const ex2 = document.getElementById("ex2");
-						const button2 = document.getElementById("button2");
-						button2.addEventListener("click", () => {
-							return console.log(ex2);
-						});
+
 					</script>
 				</article>
-				<hr class="sub-section-hr">
 
 				<article id="by-tag">
 					<h3>Find an HTML Element by Tag Name</h3>
@@ -304,7 +307,14 @@
 
 		</footer>
 	</div>
-	<!-- <script src="script.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.9.0/dist/highlightjs-line-numbers.min.js"></script>
+	<script src="script.js"></script>
+	<script>
+		hljs.highlightAll();
+		hljs.initLineNumbersOnLoad();
+	</script>
 </body>
 
 </html>
