@@ -18,23 +18,22 @@ body {
 	background-color: #f8f8f8; /* Light grey background */
 }
 
+/* ===========================
+   Layout
+   =========================== */
+/* Container with all grid areas */
 .container {
-	display: grid;
-	height: 100%;
-	grid-template-areas:
-		"header"
-		"nav"
-		"top-bar"
-		"aside"
-		"main"
-		"footer";
-	grid-template-columns: auto;
-	grid-template-rows: auto auto 1fr auto;
-	margin: 20px auto; /* Center the container and add vertical spacing */
-	/* padding: 20px; */
-	background-color: #fff; /* White background for content area */
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-	border-radius: 5px; /* Slightly rounded corners */
+  display: grid;
+  grid-template-areas:
+    "header"
+    "nav"
+    "top-bar"
+    "aside"
+    "main"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 4px auto 1fr auto; /* <- top-bar gets 4px */
+  min-height: 100vh;
 }
 
 /* Header Styles */
@@ -86,12 +85,17 @@ nav ul li a:hover {
 }
 
 .top-bar {
-	grid-area: top-bar;
-	border: none;
-	border-top: #dad9d9 .5px solid;
+  grid-area: top-bar;
+  height: 4px; /* makes the line visible */
+  background-color: var(--color-neutral-mid); /* solid color line */
+  width: 100%; /* full width */
 }
 
-/* Main Content Styles */
+
+
+/* ===========================
+   Main Content
+   =========================== */
 main {
 	border-top: 1px solid #eee; /* Separator below header */
 	padding: 1em 1.5em;
