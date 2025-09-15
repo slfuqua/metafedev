@@ -20,7 +20,7 @@ body {
 
 .container {
 	display: grid;
-	height: 100%; /* Full viewport height */
+	height: 100%;
 	grid-template-areas:
 		"header"
 		"nav"
