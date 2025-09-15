@@ -34,6 +34,9 @@ body {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 4px auto 1fr auto; /* <- top-bar gets 4px */
   min-height: 100vh;
+	max-width: 600px; /* Limit width for better readability on large screens */
+	margin: 0 1 em; /* Center the container */
+
 }
 
 /* Header Styles */
@@ -41,7 +44,8 @@ header {
 	grid-area: header;
 	/* align-items: center; */
 	/* text-align: center; */
-	padding: 1em 1.5em .5em 1.5em;
+	justify-content: end;
+	padding: 1em 1.5em 0% 1.5em;
 	margin-bottom: .5em;
 }
 
@@ -167,6 +171,16 @@ article p {
 	margin-bottom: 15px;
 }
 
+pre {
+	background-color: #f4f4f4;
+	padding: 1em;
+	border: grey 1px solid;
+	border-radius: 5px;
+	margin-top: 1em;
+	overflow-x: auto;
+	margin-bottom: 1em;
+}
+
 /* Aside Styles */
 	aside {
 	grid-area: aside;
@@ -238,7 +252,7 @@ button {
 	background-color: rgb(26, 119, 225);
 	color: #fff;
 	border: none;
-	padding: 5px 15px;
+	padding: .3125em 1em;
 	border-radius: 5px;
 	cursor: pointer;
 }
