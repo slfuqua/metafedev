@@ -17,8 +17,8 @@ body {
 	margin: 0;
 	font-family: "Arial", sans-serif;
 	line-height: 1.5;
-	color: #333;               /* Dark grey for body text */
-	background-color: #f8f8f8; /* Light grey background */
+	color: #333;  
+	background-color: #f8f8f8; 
 }
 
 /* ===========================
@@ -95,6 +95,7 @@ nav ul li a:hover {
 /* ===========================
    Top Bar
    =========================== */
+
 .top-bar {
 	grid-area: top-bar;
 	border-top: .5px solid #dad9d9;
@@ -103,6 +104,7 @@ nav ul li a:hover {
 /* ===========================
    Main Content
    =========================== */
+
 main {
 	grid-area: main;
 	padding: 1em 2em 1em 1.5em;
@@ -122,8 +124,9 @@ main h1 {
 }
 
 /* ===========================
-   Sections & Articles
+   Sections
    =========================== */
+
 section {
 	margin-bottom: 1em;
 }
@@ -139,6 +142,10 @@ section h3 {
 	color: #535353;
 	margin: 0 0 .4em;
 }
+
+/* ===========================
+   Articles
+	=========================== */
 
 article {
 	margin-bottom: .75em;

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Highlight.js Example</title>
+	<!-- Include a Highlight.js theme stylesheet -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css">
+</head>
+
+<body>
+
+	<h1>Highlight.js Demo</h1>
+
+	<h2>JavaScript Example</h2>
+	<pre><code class="language-javascript">
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet("World");
+  </code></pre>
+
+	<h2>Python Example</h2>
+	<pre><code class="language-python">
+def factorial(n):
+    if n == 0:
+        return 1
+    else:
+        return n * factorial(n-1)
+
+print(factorial(5))
+  </code></pre>
+
+	<pre><code>const ex2 = document.getElementById("ex2");
+const button2 = document.getElementById("button2");
+
+button2.addEventListener("click", () => {
+	return console.log(ex2);
+});
+						</code></pre>
+
+	<!-- Include the Highlight.js library script -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+	<script>
+		// Initialize Highlight.js to highlight all code blocks
+		hljs.highlightAll();
+	</script>
+
+</body>
+
+</html>

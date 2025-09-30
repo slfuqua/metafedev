@@ -5,7 +5,7 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>DOM Methods</title>
-	<link rel="stylesheet" href="styles.css" />
+	<link rel="stylesheet" href="styles2.css" />
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
 </head>
 
@@ -32,19 +32,25 @@
 				overview of some of the most common ones.
 			</p>
 			<section>
-				<h2 id="find-elems">Selecing Elements</h2>
+				<h2 id="find-elems">Finding Elements</h2>
 
 				<article id="by-Id">
 					<h3>Find an HTML Element by Id</h3>
-					<p id="ex2">Click the button below to print this entire element to the console.</p>
-					<button id="button2">Print Output</button>
-					<pre><code>	const ex2 = document.getElementById("ex2");
-	const button2 = document.getElementById("button2");
+					<p id="ex1">Click the button below to print this entire element to the console.</p>
+					<button id="button1">Print Output</button>
+					<script>
+						const ex1 = document.getElementById("ex1");
+						const button1 = document.getElementById("button1");
+						button1.addEventListener("click", () => {
+							return console.log(ex1);
+						});
+					</script>
+					<pre><code>const ex2 = document.getElementById("ex2");
+const button2 = document.getElementById("button2");
 
-	button2.addEventListener("click", () => {
-		return console.log(ex2);
-	});
-					</code></pre>
+button2.addEventListener("click", () => {
+	return console.log(ex2);
+});</code></pre>
 					<script>
 
 					</script>
@@ -52,21 +58,21 @@
 
 				<article id="by-tag">
 					<h3>Find an HTML Element by Tag Name</h3>
-					<div id="ex3">
+					<div id="ex2">
 						<p>Print these two paragraph elements to the console.</p>
 						<p>
 							And use array indexing and the <code>style</code> property to turn
 							this second element bold.
 						</p>
-						<button id="button3">Print Output and Change Style</button>
+						<button id="button2">Print Output and Change Style</button>
 					</div>
 					<script>
-						const button3 = document.getElementById("button3");
+						const button2 = document.getElementById("button2");
 						// First get the div and its contents
-						const getDiv = document.getElementById("ex3");
+						const getDiv = document.getElementById("ex2");
 						// Then get all of the <p> elements within it, in an array
 						const getP = getDiv.getElementsByTagName("p");
-						button3.addEventListener("click", () => {
+						button2.addEventListener("click", () => {
 							for (const item of getP) {
 								console.log(item);
 							}
@@ -79,33 +85,27 @@
 
 				<article id="by-class">
 					<h3>Find an HTML Element by Class</h3>
-					<p class="ex5 ex4">
-						The <code>getElementsByClass()</code> method is used to retrieve all members of a class, or classes. Note
-						that 'Elements' is plural.
+					<p class="ex4 ex3">
+						The <code>getElementsByClass()</code> method is used to retrieve all members of a class, or classes. Note that 'Elements' is plural.
 					</p>
-					<p class="ex4 ex5">
-						We can retrieve all elements with one or multiple class names. And since it returns an array, we can also
-						access its members using
-						indexing. When using mulitple classes as arguments, <code>getElementsByClass()</code>, only returns those
-						elements that have
-						all of the elements listed.
+					<p class="ex3 ex4">						
+						We can retrieve all elements with one or multiple class names. And since it returns an array, we can also access its members using
+						indexing. When using mulitple classes as arguments, <code>getElementsByClass()</code>, only returns those 				elements that have all of the elements listed.
 					</p>
-					<p class="ex5 ex4">
-						In this example we will first change the styling of all three of these first three paragraphs with the
-						<code>class="ex4"</code> AND <code>class="ex5"</code> selectors. And we will change the background color of
-						the middle paragraph with indexing.
+					<p class="ex4 ex3">
+						In this example we will first change the styling of all three of these first three paragraphs with the <code>class="ex4"</code> AND <code>class="ex4"</code> selectors. And we will change the background color of the middle paragraph with indexing.
 					</p>
-					<p class="ex4">
+					<p class="ex3">
 						It will not work on this paragraph, because it only has a class of
 						<code>ex4</code>.
 					</p>
-					<p class="ex5">
-						Or this paragragh that only has <code>ex5</code> as its class.
+					<p class="ex4">
+						Or this paragragh that only has <code>ex4</code> as its class.
 					</p>
 					<button id="button4">Change the Styles</button>
 					<script>
 						document.addEventListener("DOMContentLoaded", () => {
-							const getClass = document.getElementsByClassName("ex4 ex5"); // or "ex4 ex5"
+							const getClass = document.getElementsByClassName("ex4 ex3"); // or "ex4 ex3"
 							const button4 = document.getElementById("button4");
 							button4.addEventListener("click", () => {
 								// getElementsByClassName returns an array that we can iterate
@@ -135,28 +135,26 @@
 				<article>
 					<h3 id="innerHTML">Using <code>innerHTML</code></h3>
 					<p>We can change an element's text using <code>innerHTML</code>.</p>
-					<p id="ex1">This is the original text.</p>
-					<button id="button1">Change Text</button><br />
+					<p id="ex5">This is the original text.</p>
+					<button id="button5">Change Text</button><br />
 					<script>
-						const ex1 = document.getElementById("ex1");
-						const button1 = document.getElementById("button1");
-						button1.addEventListener("click", () => {
-							ex1.innerHTML = "My new text using <code>innerHTML</code>.";
+						const ex5 = document.getElementById("ex5");
+						const button5 = document.getElementById("button5");
+						button5.addEventListener("click", () => {
+							ex5.innerHTML = "My new text using <code>innerHTML</code>.";
 						});
 					</script>
 				</article>
 
 				<article>
-					<h3 id="modify-attr">Changing the Value of an Attribute</h3>
-					<p>To change the value of an attribute, we us the element's <code>attribute</code> property.
-						In
-						this example we will change the <code>&ltsrc&gt</code> attribute of the <code>&ltimg&gt</code> element.</p>
+					<h3 id="modify-attr">Change the Value of an Attribute</h3>
+					<p>To change the value of an attribute, we us the element's <code>attribute</code> property. In this example we will change the <code>&ltsrc&gt</code> attribute of the <code>&ltimg&gt</code> element.</p>
 					<p><img id="cat" src="sanguin_cat.jpg" alt="Sanguin Cat" style="width:300px"></p>
-					<button id="button5" type="button">Change the Cat!</button>
+					<button id="button6" type="button">Change the Cat!</button>
 					<script>
-						const button5 = document.getElementById('button5');
+						const button6 = document.getElementById('button6');
 						const cat = document.getElementById('cat');
-						button5.onclick = () => {
+						button6.onclick = () => {
 							cat.src = "happy_cat.jpg";
 						};
 					</script>
@@ -168,12 +166,12 @@
 						it.
 					</p>
 					<p id="date"></p>
-					<button type="button" id="button6">Update</button>
+					<button type="button" id="button7">Update</button>
 					<script>
 						document.getElementById('date').innerHTML = 'Date: ' + Date();
 						const dateTime = document.getElementById('date');
-						const b6 = document.getElementById('button6');
-						b6.onclick = () => {
+						const button7 = document.getElementById('button7');
+						button7.onclick = () => {
 							dateTime.innerHTML = Date();
 						}
 					</script>
@@ -181,11 +179,7 @@
 
 				<article>
 					<h3 id="doc-write">Using <code>document.write()</code></h3>
-					<p><code>document.write()</code> is generally discouraged due to its potential to overwrite the entire
-						document
-						and its synchronous nature, which can block rendering. To modify an element, <code>innerHTML</code> can be
-						used
-						instead.</p>
+					<p><code>document.write()</code> is generally discouraged due to its potential to overwrite the entire document and its synchronous nature, which can block rendering. To modify an element, <code>innerHTML</code> can be used instead.</p>
 				</article>
 			</section>
 
@@ -194,29 +188,9 @@
 				<h2 id="form-valid">JavaScript Form Validation</h2>
 				<article>
 					<h3 id="input-valid">Input Validation</h3>
-					<p>HTML5 has a number of built-in validation attributes for form inputs, such as <code>pattern</code> for
-						phone numbers or passwords, <code>min</code> and <code>max</code> for numbers or amounts,
-						<code>required</code>, and
-						input <code>type</code> for <code>email</code>, <code>url</code>, <code>number</code>, etc. But there are
-						many
-						checks that HTML can't
-						complete, like checking a server for available usernames, making sure that a confirmed password matches the
-						original, giving custom feedback on password strength or any other input, or triggering validation checks
-						when
-						exiting an input instead of waiting for the submit button to be clicked.
-					</p>
-					<p>Without JS, the form is only checked for validity
-						when the submit button is pressed. We can use JS to actually check the input as soon as the user exits the
-						input
-						box. That way they can make corrections as they go.</p>
-					<p>The code below uses the method <code>reportValidity()</code> to trigger the browser's built-in form
-						validation
-						UI for an element or full form. We are going to use JavaScript's <code>blur</code> event, which occurs when
-						an
-						element
-						loses focus, i.e., when the user moves to another element. We have set the text input's <code>type</code> to
-						"email",
-						and have made it <code>required</code>.</p>
+					<p>HTML5 has a number of built-in validation attributes for form inputs, such as <code>pattern</code> for phone numbers or passwords, <code>min</code> and <code>max</code> for numbers or amounts, <code>required</code>, and input <code>type</code> for <code>email</code>, <code>url</code>, <code>number</code>, etc. But there are many checks that HTML can't complete, like checking a server for available usernames, making sure that a confirmed password matches the original, giving custom feedback on password strength or any other input, or triggering validation checks when exiting an input instead of waiting for the submit button to be clicked.</p>
+					<p>Without JS, the form is only checked for validity when the submit button is pressed. We can use JS to actually check the input as soon as the user exits the input box. That way they can make corrections as they go.</p>
+					<p>The code below uses the method <code>reportValidity()</code> to trigger the browser's built-in form validation UI for an element or full form. We are going to use JavaScript's <code>blur</code> event, which occurs when an element loses focus, i.e., when the user moves to another element. We have set the text input's <code>type</code> to "email", and have made it <code>required</code>.</p>
 					<form action="https://httpbin.org/post" method="post" id="num-form">
 						<p>
 							<label for="email">Enter your email:</label>
@@ -236,7 +210,7 @@
 						// 	}
 						// 	email.reportValidity();
 						// });
-						// Check when leaving the field
+						// Check validity when leaving the field
 						email.addEventListener("blur", () => {
 							email.reportValidity();
 						});
@@ -245,8 +219,7 @@
 
 				<article>
 					<h3 id="custom-error">Custom Errors</h3>
-					<p>If you need a custom error message instead of the default HTML message, JavaScript can provide this using
-						<code>setCustomValidity</code>.
+					<p>If you need a custom error message instead of the default HTML message, JavaScript can provide this using <code>setCustomValidity</code>.
 					</p>
 					<form action="https://httpbin.org/post" method="post">
 						<p>An example of the regular HTML warning for a required field:</p>
@@ -285,7 +258,7 @@
 			<h3>Contents:</h3>
 
 			<ul>
-				<li><a class="h2" href="#find-elems">Finding Elements</a></li>
+				<li><a class="h2" href="#find-elems">Finding HTML Elements</a></li>
 				<ul>
 					<li><a class="h3" href="#by-ID">Find an HTML Element by Id</a></li>
 					<li><a class="h3" href="#by-tag">Find an HTML Element by Tag Name</a></li>
@@ -294,7 +267,7 @@
 				</ul>
 				<li><a href="modify-elems" class="h2">Modifying HTML Elements with Javascript</a></li>
 				<ul>
-					<li><a href="#modify-attr">Changing the Value of an Attribute</a></li>
+					<li><a class="h3" href="#modify-attr">Changing the Value of an Attribute</a></li>
 					<li><a href="dymamic" class="h3">Dynamic HTML content</a></li>
 				</ul>
 
@@ -308,13 +281,13 @@
 		</footer>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
-	<script
-		src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.9.0/dist/highlightjs-line-numbers.min.js"></script>
-	<script src="script.js"></script>
+
 	<script>
 		hljs.highlightAll();
-		hljs.initLineNumbersOnLoad();
 	</script>
+	<!-- <script
+		src="https://cdn.jsdelivr.net/npm/highlightjs-line-numbers.js@2.9.0/dist/highlightjs-line-numbers.min.js"></script> -->
+	<script src="script.js"></script>
 </body>
 
 </html>
